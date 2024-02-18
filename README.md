@@ -39,7 +39,7 @@ As per our understanding of the problem statement, we create a website for finan
 (https://financebuddy-livid.vercel.app/)
 
 ## Video Url
-https://drive.google.com/uc?id=1h_T7nMxzuWC-Rv4DDmGF_Cc0YyBvK_nd&export=download
+https://drive.google.com/file/d/1LJbkROa2AOJK0vh0RXA5jw7uzLUqroEt/view?usp=drive_link
 
 ## Remarks
-- Any additional things you want to share
+
