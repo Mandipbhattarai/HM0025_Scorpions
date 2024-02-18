@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fixed Deposit Calculator</title>
+<link rel="stylesheet" href="fd-style.css"> 
+<script src="script.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h2>Fixed Deposit Calculator</h2>
+    <form id="fdForm">
+        <label for="principal">Principal Amount:</label>
+        <input type="number" id="principal" required>
+        
+        <label for="timePeriod">Time Period (in years):</label>
+        <input type="number" id="timePeriod" required>
+        
+        <button type="button" onclick="calculate()">Calculate</button>
+    </form>
+    
+    <div id="result"></div>
+</div>
+
+
+
+</body>
+</html>
