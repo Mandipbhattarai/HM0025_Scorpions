@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finance App - Login & Signup</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="container">
         <div class="index-image-login"> <img src="img/logo-login.png" alt="logo"></div>
-      
-        <form> 
+        <form>
             <label for="username">Username:
                 <input type="text" id="username" name="username" required>
-            </label>
-            
+            </label>         
+
+
             <label for="email">Email:
                 <input type="email" id="email" name="email" required>
             </label>
@@ -24,22 +23,12 @@
                 <input type="password" id="password" name="password" required>
             </label>
 
-            <input id="login" type="submit" value="Log In">
+            <input id="signUp" type="submit" value="Sign Up">
+            
         </form>
-        <div class="signup-link">
-            <a href="signup.html">Don't have an account? Sign up</a>
-            <p>Or</p>
-        </div>
-        <div id="google-signin">
-           
-            <img id="google-login" src="img/google.png" alt="goog;e-logo"> <p>  Sign in with Google </p> 
-        </div> 
     </div>
-    <script type="module" src="js/login.js">
-    </script>
-    <script src="js/bootstrap.min.js"></script>
-
 </body>
-
-
+<script type="module" src="js/signUp.js">
+  </script>
 </html>
+

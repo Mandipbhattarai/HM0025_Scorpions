@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <nav class="navbar mb-5 navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar mb-5 navbar-shadow navbar-expand-lg bg-body-tertiary">
       <div class="container">
-        <a class="navbar-brand" href="#">logo</a>
+        <a class="navbar-brand" href="#"><img src="logo.png" alt="logo"></a>
+
         <button
           class="navbar-toggler btn-close-danger"
           type="button"
@@ -26,7 +27,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item me-5">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="homepage.html">Home</a>
             </li>
             <li class="nav-item me-5">
               <a class="nav-link disabled" aria-current="page" href="#"
@@ -34,15 +35,18 @@
               >
             </li>
             <li class="nav-item me-5">
-              <a class="nav-link active" aria-current="page" href="#"
+              <a class="nav-link active" aria-current="page" href="expenses.html"
                 >Expenses</a
               >
             </li>
             <li class="nav-item me-5">
-              <a class="nav-link active" aria-current="page" href="#"
+              <a class="nav-link active" aria-current="page" href="Contact.html"
                 >Contact</a
               >
             </li>
+            <li>
+              <input id="logOut" type="button" class="btn-primary btn" value="Log Out">
+          </li>
           </ul>
         </div>
       </div>
@@ -284,5 +288,7 @@
     <script src="js/piechart.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
+    <script type="module" src="app.js"></script>
+
   </body>
 </html>

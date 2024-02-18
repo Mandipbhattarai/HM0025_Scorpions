@@ -80,3 +80,5 @@ function updateExpenseTable() {
     tableHtml += '</tbody></table>';
     expenseTable.innerHTML = tableHtml;
 }
+
+
