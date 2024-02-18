@@ -5,70 +5,234 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Manage Karo</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="container login-page">
+    <nav class="navbar mb-5 navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="#">logo</a>
+        <button
+          class="navbar-toggler btn-close-danger"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item me-5">
+              <a class="nav-link disabled" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item me-5">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="investment.html"
+                >Investment</a
+              >
+            </li>
+            <li class="nav-item me-5">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="expenses.html"
+                >Expenses</a
+              >
+            </li>
+            <li class="nav-item me-5">
+              <a class="nav-link active" aria-current="page" href="Contact.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container my-5">
       <div class="row">
-        <div class="col-lg-5 col-12 login-page-details">
-          <div class="login-box">
-            <h2>Why We?</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-              culpa adipisci temporibus assumenda corporis vel alias voluptas
-              obcaecati, magnam repellendus voluptatem ipsum similique odit aut
-              maxime provident. Quod, deserunt minus.
+        <div class="col-lg-6 col-6 col-sm-12">
+          <div class="awareness">
+            <h2>Awareness</h2>
+            <p class="awareness-finance">
+              Financial Awareness is an important aspect of our lives. It helps
+              us to understand how to manage our money and how to make informed
+              decisions. It generally involves understanding concepts such as
+              budgeting, management, investments, and saving money. This
+              knowledge is becoming more important nowadays as we know that
+              financial stability is increasingly important. By making better
+              financial decisions one can improve overall quality of life. By
+              understanding some concepts such as budgeting, saving, investing,
+              and managing debt one can make better financial decisions and can
+              improve their life. Not only this but proficiency in financial
+              awareness can help you in cracking various banking exams as well.
             </p>
           </div>
         </div>
-        <div class="col-lg-1"></div>
-        <div class="col-lg-6 col-12">
-          <div class="text-center">
-            <main class="form-signin">
-              <form>
-                <img
-                  class="mb-4"
-                  src="img/investment.png"
-                  alt=""
-                  width="72"
-                  height="57"
-                />
-                <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-
-                <div class="form-floating">
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="floatingInput"
-                    placeholder="name@example.com"
-                  />
-                  <label for="floatingInput">Email address</label>
-                </div>
-                <div class="form-floating">
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="floatingPassword"
-                    placeholder="Password"
-                  />
-                  <label for="floatingPassword">Password</label>
-                </div>
-
-                <div class="checkbox mb-3 me-auto">
-                  <label>
-                    <input type="checkbox" value="remember-me" /> Remember me
-                  </label>
-                </div>
-                <button class="w-100 btn btn-lg btn-success" type="submit">
-                  Sign in
-                </button>
-              </form>
-            </main>
+        <div class="col-lg-6 col-6 col-sm-12">
+          <div class="piechart-main">
+            <div>
+              <canvas id="myChart"></canvas>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="container my-5">
+      <section class="articles">
+        <article>
+          <div class="article-wrapper">
+            <figure>
+              <img
+                src="https://revitalizationpartners.com/wp-content/uploads/2021/05/secure.jpg"
+                alt=""
+              />
+            </figure>
+            <div class="article-body">
+              <h2>Financial Security</h2>
+              <p>
+                Finance helps individuals and families achieve financial
+                security by providing the means to save, invest, and plan for
+                the future. It allows people to build emergency funds,
+                retirement savings, and insurance coverage to protect against
+                unforeseen events. orta. Vestibulum ultrices iaculis enim
+                imperdiet egestas.
+              </p>
+              <a
+                href="https://www.investopedia.com/articles/retirement/06/10secureretirementtips.asp"
+                class="read-more"
+              >
+                Read more <span class="sr-only">about this is some title</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="article-wrapper">
+            <figure>
+              <img
+                src="https://www.investopedia.com/terms/e/economicgrowth.asp"
+                alt=""
+              />
+            </figure>
+            <div class="article-body">
+              <h2>Economic Growth</h2>
+              <p>
+                Finance is essential for economic growth and development. It
+                enables businesses to access capital for expansion, innovation,
+                and investment in new technologies. Financial institutions play
+                a vital role in allocating resources efficiently and supporting
+                entrepreneurship.
+              </p>
+              <a
+                href="https://www.rba.gov.au/education/resources/explainers/economic-growth.html#:~:text=Economic%20growth%20refers%20to%20an,'%20or%20'real'%20terms."
+                class="read-more"
+              >
+                Read more <span class="sr-only">about this is some title</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="article-wrapper">
+            <figure>
+              <img
+                src="https://tradesmartonline.in/tradeshaala/wp-content/uploads/2022/03/The-secret-to-Wealth-Creation.png"
+                alt=""
+              />
+            </figure>
+            <div class="article-body">
+              <h2>Wealth Creation</h2>
+              <p>
+                Finance is a tool for wealth creation, enabling individuals to
+                accumulate assets and grow their net worth over time. Through
+                prudent financial management, individuals can build wealth
+                through investments, real estate, and other financial
+                instruments.
+              </p>
+              <a
+                href="https://www.etmoney.com/learn/personal-finance/what-is-wealth-creation-meaning-importance-and-strategies/"
+                class="read-more"
+              >
+                Read more <span class="sr-only">about this is some title</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
+    <footer class="main-footer text-white text-center text-lg-start">
+      <div class="container p-5">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Financial Education</h5>
+            <p>
+              Improving financial literacy is crucial for making informed
+              decisions about money. Understanding concepts like budgeting,
+              saving, and investing can lead to a more secure financial future.
+            </p>
+          </div>
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Finance Awareness</h5>
+            <p>
+              Stay updated with the latest financial news and trends. Being
+              aware of financial opportunities and risks can help you make
+              better financial choices and achieve your goals.
+            </p>
+          </div>
+        </div>
+      </div>
+      <hr style="color: aliceblue" />
+      <div class="text-center p-3 footer-text">
+        © 2024 Copyright:
+        <a class="text-body" href="#">Scorpions</a>
+      </div>
+    </footer>
 
+    <script src="js/piechart.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
   </body>

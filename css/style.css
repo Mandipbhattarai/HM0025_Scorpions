@@ -1,11 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
   font-family: "Montserrat", sans-serif;
+  background: whitesmoke;
 }
 .login-page {
   margin-top: 170px;
 }
-
+.disabled {
+  color: rgb(134, 134, 134) !important;
+}
+.navbar-nav .nav-item .nav-link {
+  color: rgb(0, 0, 0);
+}
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover .nav-link {
+  color: rgb(134, 134, 134);
+}
 .piechart-main {
   width: 80%;
   margin: 15px auto;
@@ -224,4 +234,114 @@ article:has(:hover, :focus) {
 
 .border-radius-contact {
   border-radius: 5px;
+}
+
+/* Investment  */
+
+.sip-investment {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.btn-check:focus + .btn-primary,
+.btn-primary:focus {
+  border-color: #ccc;
+  box-shadow: none;
+}
+
+.investment-section {
+  margin: 80px 0;
+}
+.investment-info {
+  text-align: justify;
+}
+
+.investment-desc {
+  padding: 30px;
+}
+
+/* expenses  */
+
+.box a {
+  text-decoration: none !important;
+  color: #050505;
+}
+
+.box {
+  margin-bottom: 60px;
+}
+
+.box-part {
+  background: linear-gradient(110deg, #e0d5d5 60%, #d3c7c7 60%);
+  border-radius: 0;
+  padding: 60px 10px;
+  margin: 30px 0;
+  color: #1b1a1a;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 14px 28px, rgba(0, 0, 0, 0.22) 0 10px 10px;
+}
+
+.box-part:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px,
+    rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px,
+    rgba(0, 0, 0, 0.09) 0 -3px 5px;
+  transition: 0.4s;
+}
+
+.text {
+  margin: 20px 0;
+}
+
+.box-part > i {
+  color: #000000;
+}
+
+.image-advantage {
+  height: 100%;
+  width: 100%;
+}
+
+#addExpenseForm {
+  margin-bottom: 20px;
+}
+
+#expenseTable {
+  margin-top: 20px;
+}
+
+.expenseDaily {
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  padding: 40px;
+}
+
+.table-expenses {
+  padding: 20px;
+}
+
+.expenses-section {
+  min-height: 550px;
+  padding: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.footer-text {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.main-footer {
+  background-color: #1b1a1a;
+}
+.footer-text > a {
+  color: #d3c7c7 !important;
+  text-decoration: none;
+}
+
+.awareness-finance {
+  text-align: justify;
+}
+
+.awareness{
+  
 }
