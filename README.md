@@ -27,6 +27,12 @@ As per our understanding of the problem statement, we create a website for finan
 ![expenses](https://github.com/Mandipbhattarai/HM0025_Scorpions/assets/127766615/062ee009-c3b1-4363-ba04-7b19edd15e47)
 ![expenses2](https://github.com/Mandipbhattarai/HM0025_Scorpions/assets/127766615/862f1c37-ad4c-4f1f-b29b-9de1e70e2663)
 ![contact](https://github.com/Mandipbhattarai/HM0025_Scorpions/assets/127766615/f2b96830-81a4-4d21-8156-613b4aea0786)
+![image](https://github.com/Mandipbhattarai/HM0025_Scorpions/assets/127766615/3a011577-f24e-4752-a159-5afd09e1513c)
+![image](https://github.com/Mandipbhattarai/HM0025_Scorpions/assets/127766615/618df130-ff5a-401f-8344-aa11caa3c27f)
+![image](https://github.com/Mandipbhattarai/HM0025_Scorpions/assets/127766615/313b6c1e-3975-4c5d-a1c6-ebd6c9a10c90)
+![image](https://github.com/Mandipbhattarai/HM0025_Scorpions/assets/127766615/8a5be0d1-d404-4c85-bf6d-d3d0c1fdaf0a)
+
+
 
 
 
