@@ -19,13 +19,27 @@ As per our understanding of the problem statement, we create a website for finan
 - FIREBASE
 
 ## Screenshots
+![login_page](https://github.com/Mandipbhattarai/HM0025_Scorpions/assets/127766615/154d2a4c-09fc-4047-90b7-9a6d2a1694c8)
+![investment](https://github.com/Mandipbhattarai/HM0025_Scorpions/assets/127766615/a3af0de1-1e0c-4b2a-af72-8ae09edf011a)
+
+![investment2](https://github.com/Mandipbhattarai/HM0025_Scorpions/assets/127766615/8f54bda5-32ef-4c3f-9527-ed72e965398e)
+![home-page](https://github.com/Mandipbhattarai/HM0025_Scorpions/assets/127766615/b99b076c-506a-476f-a949-f600fe06af02)
+![expenses](https://github.com/Mandipbhattarai/HM0025_Scorpions/assets/127766615/062ee009-c3b1-4363-ba04-7b19edd15e47)
+![expenses2](https://github.com/Mandipbhattarai/HM0025_Scorpions/assets/127766615/862f1c37-ad4c-4f1f-b29b-9de1e70e2663)
+![contact](https://github.com/Mandipbhattarai/HM0025_Scorpions/assets/127766615/f2b96830-81a4-4d21-8156-613b4aea0786)
+
+
+
+
+
+
 
 
 ## Deployed Url
 (https://financebuddy-livid.vercel.app/)
 
 ## Video Url
-[Link to Demo Video](video_url)
+https://drive.google.com/uc?id=1h_T7nMxzuWC-Rv4DDmGF_Cc0YyBvK_nd&export=download
 
 ## Remarks
 - Any additional things you want to share
