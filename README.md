@@ -22,7 +22,7 @@ As per our understanding of the problem statement, we create a website for finan
 
 
 ## Deployed Url
-[Link to Deployed Solution](gfgpccoe.in)
+(https://financebuddy-livid.vercel.app/)
 
 ## Video Url
 [Link to Demo Video](video_url)
