@@ -355,6 +355,10 @@ article:has(:hover, :focus) {
   font-size: 19px;
 }
 
+.accordian-header {
+  background: #e0e0e0;
+  color: #000;
+}
 .navbar-brand {
   width: 120px;
 }
@@ -401,4 +405,63 @@ article:has(:hover, :focus) {
   object-fit: cover;
   width: 100%;
   height: 250px;
+}
+
+.pie-chart-box {
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  padding: 20px;
+}
+
+.people-thoughts {
+  line-height: 50px;
+  margin-bottom: 30px;
+}
+.accordian-home {
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+.people-thoughts h2 {
+  margin-left: 20px;
+  font-weight: 700;
+  color: #50503b;
+  /* font-family: "Campton Semi Bold"; */
+  font-size: 46px;
+  line-height: 48px;
+  margin-bottom: 20px;
+}
+
+.people-thoughts p {
+  /* font-family: "Campton Book"; */
+  color: #585858;
+  font-size: 16px;
+  margin-left: 20px;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+.thoughts-card {
+  margin: 5px 5px 20px 5px;
+}
+
+.testimonial {
+  background: #fff;
+  background-image: url(https://cdn.spiir.dk/spiirlandingpage/testimonials/testimonial-quote.svg);
+  background-repeat: no-repeat;
+  background-size: 16px 11px;
+  background-position: 20px 15px;
+  box-shadow: 0 0 5px #000;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+  border-radius: 16px;
+  padding: 40px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.testimonials {
+  border: none;
+}
+
+.testimonials-yellow:nth-child(2n),
+.yellow {
+  background-color: #ffc435;
 }
