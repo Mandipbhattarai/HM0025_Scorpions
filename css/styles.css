@@ -101,8 +101,9 @@ input[type="submit"]:hover {
 }
 
 #google-signin img {
-    max-width: 40px; /* Increase size slightly */
-    max-height: 40px; /* Fix missing semicolon */
+    max-width: 180px; /* Increase size slightly */
+    max-height: 180px;
+    border-radius: 0.2rem; /* Fix missing semicolon */
 }
 
 
