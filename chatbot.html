@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Icon</title>
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Style for chat icon */
+        .chat-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            /* Ensure it's above other elements */
+            cursor: pointer;
+        }
+
+        .chat-icon img {
+            width: 150px;
+            /* Adjust size as needed */
+            height: auto;
+        }
+
+        /* Style for modal */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1000;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 20% auto;
+            /* Centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            /* Adjust width as needed */
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Chatbot Icon -->
+    <div class="chat-icon" onclick="openModal()">
+        <img src="chatbot.png" alt="Chatbot Icon">
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Chatbot</h2>
+            <!-- You can include your chatbot interface here -->
+        </div>
+    </div>
+
+    <script>
+        // Open the modal
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        // Close the modal
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        // Close the modal when clicking outside of it
+        window.onclick = function (event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+    </script>
+</body>
+
+</html>
