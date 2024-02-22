@@ -26,67 +26,54 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebas
     var userEmail;
     var userPhoto;
 const login = document.getElementById("login");
-    login.addEventListener("click",(e)=>{
-        e.preventDefault();
+login.addEventListener("click",(e)=>{
+    e.preventDefault();
 
-        var username = document.getElementById("username").value;
-        var email = document.getElementById("email").value;
-        var password = document.getElementById("password").value;
-        signInWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed in 
-    const user = userCredential.user;
-    
-    const encodedUserName = encodeURIComponent(username);
-    const encodedUserEmail = encodeURIComponent(email);
-    
-            // Redirect to newpage.html with user credentials as URL parameters
-    
-    const dt = new Date();
-    update(ref(database, 'users/' +user.uid),{
-        last_login : dt,
-    });
-    window.location.href = `homepage.html?userName=${encodedUserName}&userEmail=${encodedUserEmail}`;
-    //alert(userName);
-    
+    var username = document.getElementById("username").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
 
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    alert(errorMessage); 
-
-  });
-
-    });
-
-    const google_signin = document.getElementById("google-login");
-    google_signin.addEventListener("click",(e)=>{
-        signInWithPopup(auth, provider)
-        .then((result) => {
-            const credential = GoogleAuthProvider.credentialFromResult(result);
-            const token = credential.accessToken;
-    
-            const user = result.user;
-    
-            userName = user.displayName;
-            userEmail = user.email;
-            userPhoto = user.photoURL;
-    
-            // After retrieving user credentials
-            const encodedUserName = encodeURIComponent(userName);
-            const encodedUserEmail = encodeURIComponent(userEmail);
-            const encodedUserPhoto = encodeURIComponent(userPhoto);
-    
-            // Redirect to newpage.html with user credentials as URL parameters
-            window.location.href = `homepage.html?userName=${encodedUserName}&userEmail=${encodedUserEmail}&userPhoto=${encodedUserPhoto}`;
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            const email = error.customData.email;
-            const credential = GoogleAuthProvider.credentialFromError(error);
+        // Store user credentials in sessionStorage
+        sessionStorage.setItem('userName', username);
+        sessionStorage.setItem('userEmail', email);
+        
+        const dt = new Date();
+        update(ref(database, 'users/' +user.uid),{
+            last_login : dt,
         });
+        window.location.href = `homepage.html`; // Redirect to homepage without passing user data through URL
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert(errorMessage); 
     });
-    
+});
+
+const google_signin = document.getElementById("google-login");
+google_signin.addEventListener("click",(e)=>{
+    signInWithPopup(auth, provider)
+    .then((result) => {
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+
+        const user = result.user;
+
+        // Store user credentials in sessionStorage
+        sessionStorage.setItem('userName', user.displayName);
+        sessionStorage.setItem('userEmail', user.email);
+        sessionStorage.setItem('userPhoto', user.photoURL);
+
+        window.location.href = `homepage.html`; // Redirect to homepage without passing user data through URL
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        const email = error.customData.email;
+        const credential = GoogleAuthProvider.credentialFromError(error);
+    });
+});
