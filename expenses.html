@@ -12,7 +12,6 @@
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
       crossorigin="anonymous"
     />
-
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -123,13 +122,15 @@
                 required
               />
             </div>
-            <button type="submit" class="btn btn-success">Add Expense</button>
+            <button type="submit" id="addExpense" class="btn btn-success">
+              Add Expense
+            </button>
           </form>
         </div>
         <div class="col-lg-6 col-sm-12">
           <div class="expenses-section">
             <h2>Daily Expense List</h2>
-            <table class="table table-expenses">
+            <table class="table table-expenses" id="table-expenses">
               <thead>
                 <tr>
                   <th scope="col">#</th>
@@ -139,29 +140,7 @@
                   <th scope="col">Date</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Chai</td>
-                  <td>12</td>
-                  <td>Food</td>
-                  <td>18-02-2024</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Insurance</td>
-                  <td>200</td>
-                  <td>Saving</td>
-                  <td>18-02-2024</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Movie</td>
-                  <td>400</td>
-                  <td>Entertainment</td>
-                  <td>18-02-2024</td>
-                </tr>
-              </tbody>
+              <tbody></tbody>
             </table>
           </div>
         </div>
@@ -341,6 +320,26 @@
         <a class="text-body" href="#">Scorpions</a>
       </div>
     </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyBAyJw-EzvrH4O1Il43sA-ceJoCkUxvUUE",
+        authDomain: "financeapp-29fd7.firebaseapp.com",
+        databaseURL: "https://financeapp-29fd7-default-rtdb.firebaseio.com",
+        projectId: "financeapp-29fd7",
+        storageBucket: "financeapp-29fd7.appspot.com",
+        messagingSenderId: "36688183901",
+        appId: "1:36688183901:web:9a11959af52cf8911403b4",
+      };
+
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script type="module" src="js/expenses.js"></script>
     <script src="js/weeklyChart.js"></script>
     <script src="js/monthlyChart.js"></script>
     <script src="js/yearlyChart.js"></script>
