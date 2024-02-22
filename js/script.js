@@ -43,41 +43,40 @@ function calculateGold(event) {
 }
 
 
-document.getElementById('expenseForm').addEventListener('submit', function (event) {
-    event.preventDefault();
-    const name = document.getElementById('expenseName').value;
-    const amount = document.getElementById('expenseAmount').value;
-    const date = document.getElementById('expenseDate').value;
+// document.getElementById('expenseForm').addEventListener('submit', function (event) {
+//     event.preventDefault();
+//     const name = document.getElementById('expenseName').value;
+//     const amount = document.getElementById('expenseAmount').value;
+//     const date = document.getElementById('expenseDate').value;
 
 
-    console.log(`Name: ${name}, Amount: ${amount}, Date: ${date}`);
+//     console.log(`Name: ${name}, Amount: ${amount}, Date: ${date}`);
 
-    this.reset();
-});
+//     this.reset();
+// });
 
 
-const expenseForm = document.getElementById('expenseForm');
-const expenseTable = document.getElementById('expenseTable');
-let expenses = [];
+// const expenseForm = document.getElementById('expenseForm');
+// const expenseTable = document.getElementById('expenseTable');
+// let expenses = [];
 
-expenseForm.addEventListener('submit', function (event) {
-    event.preventDefault();
-    const name = document.getElementById('expenseName').value;
-    const amount = parseFloat(document.getElementById('expenseAmount').value);
-    const category = document.getElementById('expenseCategory').value;
-    const date = document.getElementById('expenseDate').value;
+// expenseForm.addEventListener('submit', function (event) {
+//     event.preventDefault();
+//     const name = document.getElementById('expenseName').value;
+//     const amount = parseFloat(document.getElementById('expenseAmount').value);
+//     const category = document.getElementById('expenseCategory').value;
+//     const date = document.getElementById('expenseDate').value;
 
-    expenses.push({ name, amount, category, date });
-    updateExpenseTable();
-    this.reset();
-});
+//     expenses.push({ name, amount, category, date });
+//     updateExpenseTable();
+//     this.reset();
+// });
 
-function updateExpenseTable() {
-    let tableHtml = '<h2>Expense Summary</h2><table class="table"><thead><tr><th>Name</th><th>Amount</th><th>Category</th><th>Date</th></tr></thead><tbody>';
-    expenses.forEach((expense, index) => {
-        tableHtml += `<tr><td>${expense.name}</td><td>${expense.amount}</td><td>${expense.category}</td><td>${expense.date}</td></tr>`;
-    });
-    tableHtml += '</tbody></table>';
-    expenseTable.innerHTML = tableHtml;
-}
-
+// function updateExpenseTable() {
+//     let tableHtml = '<h2>Expense Summary</h2><table class="table"><thead><tr><th>Name</th><th>Amount</th><th>Category</th><th>Date</th></tr></thead><tbody>';
+//     expenses.forEach((expense, index) => {
+//         tableHtml += `<tr><td>${expense.name}</td><td>${expense.amount}</td><td>${expense.category}</td><td>${expense.date}</td></tr>`;
+//     });
+//     tableHtml += '</tbody></table>';
+//     expenseTable.innerHTML = tableHtml;
+// }
