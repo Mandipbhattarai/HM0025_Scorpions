@@ -1,10 +1,9 @@
 
 
-const urlParams = new URLSearchParams(window.location.search);
-const userName = urlParams.get('userName');
-const userEmail = urlParams.get('userEmail');
-const userPhoto = urlParams.get('userPhoto');
+
+const userName = sessionStorage.getItem('userName');
+const userEmail = sessionStorage.getItem('userEmail');
+const userPhoto = sessionStorage.getItem('userPhoto');
 
 // Update HTML elements with user credentials
-document.getElementById("name").innerText = "Hi, "+userName || "Unknown User";
-
+document.getElementById("name").innerText = "Hi, " + (userName || "Unknown User");
