@@ -3,15 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Manage Karo</title>
+    <title>Finance Buddy</title>
+    <link rel="icon" href="logo.png" />
+
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <nav class="navbar mb-5 navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar mb-5 navbar-shadow navbar-expand-lg bg-body-tertiary">
       <div class="container">
-        <a class="navbar-brand" href="#">logo</a>
+        <a class="navbar-brand" href="#"><img src="logo.png" alt="logo" /></a>
+
         <button
           class="navbar-toggler btn-close-danger"
           type="button"
@@ -26,7 +29,18 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item me-5">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="homepage.html"
+                >Home</a
+              >
+            </li>
+
+            <li class="nav-item me-5">
+              <a class="nav-link active" aria-current="page" href="blogs.html"
+                >Blog</a
+              >
             </li>
             <li class="nav-item me-5">
               <a class="nav-link disabled" aria-current="page" href="#"
@@ -34,14 +48,25 @@
               >
             </li>
             <li class="nav-item me-5">
-              <a class="nav-link active" aria-current="page" href="#"
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="expenses.html"
                 >Expenses</a
               >
             </li>
             <li class="nav-item me-5">
-              <a class="nav-link active" aria-current="page" href="#"
+              <a class="nav-link active" aria-current="page" href="Contact.html"
                 >Contact</a
               >
+            </li>
+            <li>
+              <input
+                id="logOut"
+                type="button"
+                class="btn-success btn"
+                value="Log Out"
+              />
             </li>
           </ul>
         </div>
@@ -136,7 +161,7 @@
                 class="form-control"
               />
             </div>
-            <button type="submit" class="btn btn-primary">Calculate</button>
+            <button type="submit" class="btn btn-success">Calculate</button>
           </form>
           <div id="result" class="result mt-3"></div>
         </div>
@@ -145,7 +170,19 @@
 
     <div class="container">
       <div class="row investment-section">
-        <div class="col-lg-6 col-sm-12 investment-box">
+        <div class="col-lg-6 col-sm-12 order-lg-2 investment-desc">
+          <h2>Investing in Gold</h2>
+          <p class="investment-info">
+            Investing in gold can be a way to diversify a portfolio and hedge
+            against inflation. Gold tends to maintain its value over time and is
+            seen as a safe haven asset during times of economic uncertainty.
+            Investors can buy physical gold, such as coins or bars, or invest in
+            gold exchange-traded funds (ETFs) or gold mining stocks. However,
+            it's important to note that gold prices can be volatile, and like
+            any investment, it carries its own risks.
+          </p>
+        </div>
+        <div class="col-lg-6 col-sm-12 order-lg-1 investment-box">
           <h2 class="text-center mb-4">Gold Investment Calculator</h2>
           <form id="calculatorForm">
             <div class="mb-3">
@@ -164,25 +201,13 @@
             </div>
             <button
               type="submit"
-              class="btn btn-primary"
+              class="btn btn-success"
               onclick="calculateGold(event)"
             >
               Calculate
             </button>
           </form>
           <div id="result" class="result mt-3"></div>
-        </div>
-        <div class="col-lg-6 col-sm-12 investment-desc">
-          <h2>Investing in Gold</h2>
-          <p class="investment-info">
-            Investing in gold can be a way to diversify a portfolio and hedge
-            against inflation. Gold tends to maintain its value over time and is
-            seen as a safe haven asset during times of economic uncertainty.
-            Investors can buy physical gold, such as coins or bars, or invest in
-            gold exchange-traded funds (ETFs) or gold mining stocks. However,
-            it's important to note that gold prices can be volatile, and like
-            any investment, it carries its own risks.
-          </p>
         </div>
       </div>
     </div>
@@ -245,7 +270,7 @@
                 class="form-control"
               />
             </div>
-            <button type="button" class="btn btn-primary" onclick="calculate()">
+            <button type="button" class="btn btn-success" onclick="calculate()">
               Calculate
             </button>
           </form>
@@ -284,5 +309,6 @@
     <script src="js/piechart.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
+    <script type="module" src="app.js"></script>
   </body>
 </html>

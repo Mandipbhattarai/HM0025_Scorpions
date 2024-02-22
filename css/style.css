@@ -20,7 +20,10 @@ body {
   width: 80%;
   margin: 15px auto;
 }
-
+.navbar-shadow {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background: #f9f7f7;
+}
 /* laptop only  */
 @media (min-width: 768px) {
 }
@@ -30,11 +33,20 @@ body {
     display: none;
   }
 }
-
+@media only screen and (min-width: 770px) {
+  .image-home {
+    background-image: none;
+  }
+}
+@media (min-width: 1024px) {
+}
 /* mobile phones */
 @media (max-width: 768px) {
   .login-page-details {
     display: none;
+  }
+  .image-home {
+    background-image: none;
   }
 }
 
@@ -273,7 +285,7 @@ article:has(:hover, :focus) {
 }
 
 .box-part {
-  background: linear-gradient(110deg, #e0d5d5 60%, #d3c7c7 60%);
+  background: linear-gradient(110deg, #e6e6e6 60%, #d9dad9 60%);
   border-radius: 0;
   padding: 60px 10px;
   margin: 30px 0;
@@ -340,8 +352,53 @@ article:has(:hover, :focus) {
 
 .awareness-finance {
   text-align: justify;
+  font-size: 19px;
 }
 
-.awareness{
-  
+.navbar-brand {
+  width: 120px;
+}
+
+.navbar-brand img {
+  width: 100%;
+}
+
+.user-name {
+  font-size: 44px;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.55)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.pg2 {
+  text-align: center;
+}
+
+.image-home {
+  background-image: url(../img/homepage.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  line-height: 35px;
+}
+
+.news-letter {
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+.card > img {
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
 }
