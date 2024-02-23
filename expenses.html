@@ -311,6 +311,42 @@
         </div>
       </div>
     </div>
+
+    <div class="container mb-5">
+      <div class="row">
+        <div class="col-lg-3"></div>
+
+        <div class="col-lg-6 predict-data p-3">
+          <h2 class="mb-3 text-center">Expense Prediction</h2>
+          <p class="text-center">This is our ML based expense predictor.</p>
+          <form id="predictionForm" onsubmit="predictExpense(); return false;">
+            <label for="date" class="mb-3">Enter the date </label>
+            <input
+              type="date"
+              class="mb-3 form-control"
+              id="date"
+              name="date"
+              required
+            />
+            <label for="category" class="mb-3">Category</label>
+            <select
+              id="category"
+              class="mb-3 form-control"
+              name="category"
+              required
+            >
+              <option value="" disabled selected>Select a category</option>
+            </select>
+            <div class="text-center">
+              <input type="submit" value="Predict" class="btn btn-primary" />
+            </div>
+          </form>
+          <div id="predictionResult" class="mb-3"></div>
+          <script src="predict.js" defer></script>
+        </div>
+        <div class="col-lg-3"></div>
+      </div>
+    </div>
     <!-- mid-body ends -->
     <footer class="main-footer text-white text-center text-lg-start">
       <div class="container p-5">
@@ -357,7 +393,32 @@
 
       firebase.initializeApp(firebaseConfig);
     </script>
+    <script>
+      const categoryCodes = {
+        Food: 0,
+        Other: 1,
+        Transportation: 2,
+        Apparel: 3,
+        Household: 4,
+        "Social Life": 5,
+        Education: 6,
+        "Self-development": 7,
+        Beauty: 8,
+        Gift: 9,
+      };
+
+      const selectElement = document.getElementById("category");
+      for (const category in categoryCodes) {
+        if (categoryCodes.hasOwnProperty(category)) {
+          const option = document.createElement("option");
+          option.value = categoryCodes[category];
+          option.textContent = category;
+          selectElement.appendChild(option);
+        }
+      }
+    </script>
     <script src="js/chatbot.js"></script>
+    <script src="js/predict.js"></script>
     <script type="module" src="js/expenses.js"></script>
     <script src="js/weeklyChart.js"></script>
     <!-- <script type="module" src="js/monthlyChart.js"></script> -->
