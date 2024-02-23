@@ -73,6 +73,24 @@
         </div>
       </div>
     </nav>
+    <div class="chat-icon" onclick="openCustomModal()">
+      <img
+        src="https://hostapk.com/wp-content/uploads/2023/03/Ask-Me-Anything-AI-Chatbot.png"
+        alt="Chatbot Icon"
+      />
+    </div>
+    <div id="customModal" class="custom-modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeCustomModal()">&times;</span>
+        <iframe
+          id="customChatbotFrame"
+          width="100%"
+          height="100%"
+          allow="microphone;"
+          src=""
+        ></iframe>
+      </div>
+    </div>
 
     <div class="container mb-5">
       <img src="img/backgorund-contact.jpg" class="image-background-contact" />
@@ -132,6 +150,7 @@
         <a class="text-body" href="#">Scorpions</a>
       </div>
     </footer>
+    <script src="js/chatbot.js"></script>
     <script src="js/piechart.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>

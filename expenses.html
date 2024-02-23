@@ -73,7 +73,26 @@
         </div>
       </div>
     </nav>
+    <div class="chat-icon" onclick="openCustomModal()">
+      <img
+        src="https://hostapk.com/wp-content/uploads/2023/03/Ask-Me-Anything-AI-Chatbot.png"
+        alt="Chatbot Icon"
+      />
+    </div>
 
+    <!-- Custom Modal -->
+    <div id="customModal" class="custom-modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeCustomModal()">&times;</span>
+        <iframe
+          id="customChatbotFrame"
+          width="100%"
+          height="100%"
+          allow="microphone;"
+          src=""
+        ></iframe>
+      </div>
+    </div>
     <div class="container mb-5">
       <div class="row">
         <div class="col-lg-6 col-sm-12 expenseDaily">
@@ -205,10 +224,10 @@
               </div>
               <div class="text">
                 <span>
-                  Highest Category:
+                  Highest percentage:
                   <span id="maxCategory"></span>
                 </span>
-                <p>Highest Amount: <span id="maxCategoryNumber"></span></p>
+                <p>Percentage: <span id="maxCategoryNumber"></span></p>
               </div>
 
               <a href="#" data-bs-toggle="modal" data-bs-target="#monthly"
@@ -338,10 +357,10 @@
 
       firebase.initializeApp(firebaseConfig);
     </script>
-
+    <script src="js/chatbot.js"></script>
     <script type="module" src="js/expenses.js"></script>
     <script src="js/weeklyChart.js"></script>
-    <!-- <script type="module" src="js/monthlyChart.js"></script> -->
+    <script src="js/monthlyChart.js"></script>
     <script src="js/yearlyChart.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>

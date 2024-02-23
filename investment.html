@@ -72,7 +72,26 @@
         </div>
       </div>
     </nav>
+    <div class="chat-icon" onclick="openCustomModal()">
+      <img
+        src="https://hostapk.com/wp-content/uploads/2023/03/Ask-Me-Anything-AI-Chatbot.png"
+        alt="Chatbot Icon"
+      />
+    </div>
 
+    <!-- Custom Modal -->
+    <div id="customModal" class="custom-modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeCustomModal()">&times;</span>
+        <iframe
+          id="customChatbotFrame"
+          width="100%"
+          height="100%"
+          allow="microphone;"
+          src=""
+        ></iframe>
+      </div>
+    </div>
     <div class="container">
       <div class="row investment-section">
         <div class="col-lg-6 col-sm-12 investment-desc">
@@ -306,6 +325,7 @@
         <a class="text-body" href="#">Scorpions</a>
       </div>
     </footer>
+    <script src="js/chatbot.js"></script>
     <script src="js/piechart.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
