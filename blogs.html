@@ -1,302 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Finance Buddy - Blogs</title>
-    <link rel="icon" href="logo.png" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link
-    rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-    crossorigin="anonymous"
-  />  
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <nav class="navbar mb-5 navbar-shadow navbar-expand-lg bg-body-tertiary">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finance Buddy - Blogs</title>
+  <link rel="icon" href="logo.png" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+<div class="chat-icon" onclick="openModal()">
+  <img src="./icon/chatbot1.png" alt="Chatbot Icon">
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <iframe id="chatbotFrame" width="350" height="430" allow="microphone;" src=""></iframe>
+  </div>
+</div>
+
+<script>
+  // Open the modal and set the iframe source
+  function openModal() {
+    var modal = document.getElementById("myModal");
+    var iframe = document.getElementById("chatbotFrame");
+    iframe.src = "https://console.dialogflow.com/api-client/demo/embedded/d4605ddd-bea3-4c4d-8bf9-5861202a7c1e";
+    modal.style.display = "block";
+  }
+
+  // Close the modal
+  function closeModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+  }
+
+  // Close the modal when clicking outside of it
+  window.onclick = function (event) {
+    var modal = document.getElementById("myModal");
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+
+</script>
+<nav class="navbar mb-5 navbar-shadow navbar-expand-lg bg-body-tertiary">
+  <div class="container">
+    <a class="navbar-brand" href="#"><img src="logo.png" alt="logo" /></a>
+    <button class="navbar-toggler btn-close-danger" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item me-5">
+          <a class="nav-link active" aria-current="page" href="homepage.html">Home</a>
+        </li>
+        <li class="nav-item me-5">
+          <a class="nav-link disabled" aria-current="page" href="#">Blog</a>
+        </li>
+        <li class="nav-item me-5">
+          <a class="nav-link active" aria-current="page" href="investment.html">Investment</a>
+        </li>
+        <li class="nav-item me-5">
+          <a class="nav-link active" aria-current="page" href="expenses.html">Expenses</a>
+        </li>
+        <li class="nav-item me-5">
+          <a class="nav-link active" aria-current="page" href="#">Contact</a>
+        </li>
+        <li>
+          <input id="logOut" type="button" class="btn-success btn" value="Log Out" />
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-9">
       <div class="container">
-        <a class="navbar-brand" href="#"><img src="logo.png" alt="logo" /></a>
-        <button
-          class="navbar-toggler btn-close-danger"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item me-5">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="homepage.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item me-5">
-              <a
-                class="nav-link disabled"
-                aria-current="page"
-                href="#"
-                >Blog</a
-              >
-            </li>
-            <li class="nav-item me-5">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="investment.html"
-                >Investment</a
-              >
-            </li>
-            <li class="nav-item me-5">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="expenses.html"
-                >Expenses</a
-              >
-            </li>
-            <li class="nav-item me-5">
-              <a class="nav-link active" aria-current="page" href="#"
-                >Contact</a
-              >
-            </li>
-            <li>
-              <input
-                id="logOut"
-                type="button"
-                class="btn-success btn"
-                value="Log Out"
-              />
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <div class="chat-icon" onclick="openCustomModal()">
-      <img
-        src="https://hostapk.com/wp-content/uploads/2023/03/Ask-Me-Anything-AI-Chatbot.png"
-        alt="Chatbot Icon"
-      />
-    </div>
-
-    <!-- Custom Modal -->
-    <div id="customModal" class="custom-modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeCustomModal()">&times;</span>
-        <iframe
-          id="customChatbotFrame"
-          width="100%"
-          height="100%"
-          allow="microphone;"
-          src=""
-        ></iframe>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-9">
-          <div class="container">
-            <h2 class="mb-4">Latest Blog Posts</h2>
-            <div class="row">
-              <div class="col-md-6 mb-4">
-                <div class="card">
-                  <img
-                    src="https://emeritus.org/in/wp-content/uploads/sites/3/2022/03/What-is-Financial-Management.jpg.webp"
-                    class="card-img-top"
-                    alt="Blog Post 1"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Blog Post 1</h5>
-                    <p class="card-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Integer posuere erat a ante venenatis dapibus posuere
-                      velit aliquet.
-                    </p>
-                    <a href="#" class="btn btn-success">Read More</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 mb-4">
-                <div class="card">
-                  <img
-                    src="https://emeritus.org/in/wp-content/uploads/sites/3/2022/03/What-is-Financial-Management.jpg.webp"
-                    class="card-img-top"
-                    alt="Blog Post 2"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Blog Post 2</h5>
-                    <p class="card-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Integer posuere erat a ante venenatis dapibus posuere
-                      velit aliquet.
-                    </p>
-                    <a href="#" class="btn btn-success">Read More</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 mb-4">
-                <div class="card">
-                  <img
-                    src="data:image/jpeg;base64,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"
-                    class="card-img-top"
-                    alt="Blog Post 3"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Blog Post 3</h5>
-                    <p class="card-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Integer posuere erat a ante venenatis dapibus posuere
-                      velit aliquet.
-                    </p>
-                    <a href="#" class="btn btn-success">Read More</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 mb-4">
-                <div class="card">
-                  <img
-                    src="https://emeritus.org/in/wp-content/uploads/sites/3/2022/03/What-is-Financial-Management.jpg.webp"
-                    class="card-img-top"
-                    alt="Blog Post 3"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Blog Post 3</h5>
-                    <p class="card-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Integer posuere erat a ante venenatis dapibus posuere
-                      velit aliquet.
-                    </p>
-                    <a href="#" class="btn btn-success">Read More</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 mb-4">
-                <div class="card">
-                  <img
-                    src="https://emeritus.org/in/wp-content/uploads/sites/3/2022/03/What-is-Financial-Management.jpg.webp"
-                    class="card-img-top"
-                    alt="Blog Post 3"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Blog Post 3</h5>
-                    <p class="card-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Integer posuere erat a ante venenatis dapibus posuere
-                      velit aliquet.
-                    </p>
-                    <a href="#" class="btn btn-success">Read More</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 mb-4">
-                <div class="card">
-                  <img
-                    src="https://emeritus.org/in/wp-content/uploads/sites/3/2022/03/What-is-Financial-Management.jpg.webp"
-                    class="card-img-top"
-                    alt="Blog Post 3"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Blog Post 3</h5>
-                    <p class="card-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Integer posuere erat a ante venenatis dapibus posuere
-                      velit aliquet.
-                    </p>
-                    <a href="#" class="btn btn-success">Read More</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <h2 class="mb-4">Latest News</h2>
-          <div class="card mb-2">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text"> to additional content.</p>
-              <a href="#" class="btn btn-success">Show More</a>
-            </div>
-          </div>
-          <div class="card mb-2">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text"> to additional content.</p>
-              <a href="#" class="btn btn-success">Show More</a>
-            </div>
-          </div>
-          <div class="card mb-2">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text"> to additional content.</p>
-              <a href="#" class="btn btn-success">Show More</a>
-            </div>
-          </div>
-          <div class="card mb-2">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text"> to additional content.</p>
-              <a href="#" class="btn btn-success">Show More</a>
-            </div>
-          </div>
-          <div class="news-letter mt-4 mb-3">
-              <h3 class="">Subscribe for daily news updates:</h3>
-              <form autocomplete="off" name="google-sheet" class="d-flex" method="POST">
-                <input type="email" class="p-2" name="Email" placeholder="Enter Your Email Id">
-                <button type="submit" name="submit" class="btn btn-success"><i class="fas fa-paper-plane"></i></button>
-              </form>
-            </div>
-          
-        </div>
-        </div>
-      </div>
-    </div>
-    <footer class="main-footer text-white text-center text-lg-start">
-      <div class="container p-5">
+        <h2 class="mb-4">Latest Blog Posts</h2>
         <div class="row">
-          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Financial Education</h5>
-            <p>
-              Improving financial literacy is crucial for making informed
-              decisions about money. Understanding concepts like budgeting,
-              saving, and investing can lead to a more secure financial future.
-            </p>
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <img
+                src="https://assets.toptal.io/images?url=https%3A%2F%2Fbs-uploads.toptal.io%2Fblackfish-uploads%2Fcomponents%2Fblog_post_page%2Fcontent%2Fcover_image_file%2Fcover_image%2F1317367%2Fretina_500x200_Untitled-79cac85d365fe0f51cdda02ddff0b4be.png"
+                class="card-img-top" alt="Blog Post 1" />
+              <div class="card-body">
+                <h5 class="card-title">The Financial Implications of Using AI in Marketing</h5>
+                <p class="card-text">
+                  Scarce funding is squeezing startup budgets, leading to smaller allocations for essential marketing
+                  functions such as web analytics, SEO, and email outreach. Discover how AI can enable companies to
+                  perform these tasks at significantly lower costs.
+                </p>
+                <a href="https://www.toptal.com/finance/growth-strategy/ai-marketing" target="_blank"
+                  class="btn btn-success">Read More</a>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Finance Awareness</h5>
-            <p>
-              Stay updated with the latest financial news and trends. Being
-              aware of financial opportunities and risks can help you make
-              better financial choices and achieve your goals.
-            </p>
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <img
+                src="https://assets.toptal.io/images?url=https%3A%2F%2Fbs-uploads.toptal.io%2Fblackfish-uploads%2Fcomponents%2Fblog_post_page%2Fcontent%2Fcover_image_file%2Fcover_image%2F1308697%2Fretina_500x200_cover-chart-of-accounts-structure-b08e0830160a38ff76a7afc40b163663.png"
+                class="card-img-top" alt="Blog Post 2" />
+              <div class="card-body">
+                <h5 class="card-title">Financial Clarity at Last: How to Reboot Your Chart of Accounts Structure in 7
+                  Steps</h5>
+                <p class="card-text">
+                  It is quite common for financial reports to fall short of executives expectations. Accounting teams tend to focus on doing things the “right way” rather than asking readers of the financial statements what they want to see.
+                </p>
+                <a href="https://www.toptal.com/finance/interim-cfos/chart-of-accounts-structure" target="_blank" class="btn btn-success">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <img
+                src="https://assets.toptal.io/images?url=https%3A%2F%2Fbs-uploads.toptal.io%2Fblackfish-uploads%2Fcomponents%2Fblog_post_page%2Fcontent%2Fcover_image_file%2Fcover_image%2F1334020%2Fretina_500x200_Profitability-Optimization_BLOG-23df67f3151e1935dbe15b589f6c39d5.png"
+                class="card-img-top" alt="Blog Post 3" />
+              <div class="card-body">
+                <h5 class="card-title">Empowering Finances: Exploring the Dynamics of Peer-to-Peer Lending</h5>
+                <p class="card-text">
+                  The concept of individuals borrowing from acquaintances has deep historical roots. In traditional settings, people sought financial assistance from friends or family members, promising to repay the borrowed amount with or without interest.
+                </p>
+                <a href="https://1finance.co.in/blog/empowering-finances-exploring-the-dynamics-of-peer-to-peer-lending/" target="_blank" class="btn btn-success">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <img
+                src="https://assets.toptal.io/images?url=https%3A%2F%2Fbs-uploads.toptal.io%2Fblackfish-uploads%2Fcomponents%2Fblog_post_page%2Fcontent%2Fcover_image_file%2Fcover_image%2F1315431%2Fretina_500x200_Business_Controls_Cover-40ce7dc9fe19abb5913c57450597ac44.png"
+                class="card-img-top" alt="Blog Post 3" />
+              <div class="card-body">
+                <h5 class="card-title">Direct Vs Regular Mutual Funds: What Shall You Opt?</h5>
+                <p class="card-text">
+                  Deciding between a direct mutual fund and a regular mutual fund is one of the first dilemmas that new investors in India face. With the mutual fund industry having expanded tremendously in the last decade, this decision can have a significant impact on your investment returns over the long run.
+                </p>
+                <a href="https://1finance.co.in/blog/direct-vs-regular-mutual-funds-what-shall-you-opt/" target="_blank" class="btn btn-success">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <img
+                src="https://assets.toptal.io/images?url=https%3A%2F%2Fbs-uploads.toptal.io%2Fblackfish-uploads%2Fcomponents%2Fblog_post_page%2Fcontent%2Fcover_image_file%2Fcover_image%2F1309429%2Fretina_500x200_COVER-4731d5b9d56d1b13e297802c97723e42.png"
+                class="card-img-top" alt="Blog Post 3" />
+              <div class="card-body">
+                <h5 class="card-title">Are Your Mutual Funds Portfolios Overlapping? Here's How to Tell</h5>
+                <p class="card-text">
+                  Overlap refers to when two or more of your mutual funds invest in the same stocks. For example, if Fund A and Fund B both have 5% invested in Tata stock, that's considered a 5% overlap.
+                  This frequently happens because the top 100 stocks.
+                </p>
+                <a href="https://1finance.co.in/blog/are-your-mutual-funds-portfolios-overlapping-heres-how-to-tell/" target="_blank" class="btn btn-success">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <img
+                src="https://assets.toptal.io/images?url=https%3A%2F%2Fbs-uploads.toptal.io%2Fblackfish-uploads%2Fcomponents%2Fblog_post_page%2Fcontent%2Fcover_image_file%2Fcover_image%2F1264453%2Fretina_500x200_cover-venture-capital-portfolio-strategy-faf52d4591719a48753245f30411101b.png"
+                class="card-img-top" alt="Blog Post 3" />
+              <div class="card-body">
+                <h5 class="card-title">How to Start an Investment Portfolio: A Step-by-Step Guide</h5>
+                <p class="card-text">
+                  Investing is an excellent way to grow your wealth over time. Whether you’re looking to build a nest egg for retirement or simply generate more income, a well-constructed investment portfolio can help you achieve your financial goals.
+                </p>
+                <a href="https://1finance.co.in/blog/how-to-start-an-investment-portfolio-a-step-by-step-guide/" target="_blank" class="btn btn-success">Read More</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <hr style="color: aliceblue" />
-      <div class="text-center p-3 footer-text">
-        © 2024 Copyright:
-        <a class="text-body" href="#">Scorpions</a>
+    </div>
+    <div class="col-lg-3">
+      <h2 class="mb-4">Latest News</h2>
+      <div class="card mb-2">
+        <div class="card-body">
+          <h5 class="card-title">Nasdaq hits record high as Nvidia spikes 15% after strong earnings</h5>
+          <p class="card-text" style="text-overflow:ellipsis;">Nvidia Corp's net income for the fourth quarter ended
+            January 28, 2024 grew by 769 percent on-year and 33 percent sequentially to $12.3 billion, driven by
+            increasing demand for artificial intelligence worldwide.</p>
+          <a href="https://www.moneycontrol.com/news/world/international-results/nasdaq-hits-record-high-as-nvidia-spikes-15-after-strong-earnings-12334771.html"
+            class="btn btn-success">Show More</a>
+        </div>
       </div>
-    </footer>
-    <script src="js/chatbot.js"></script>
-    <script src="js/piechart.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
-    <script type="module" src="app.js"></script>
+      <div class="card mb-2">
+        <div class="card-body">
+          <h5 class="card-title">Gold slips as dollar firms after US data signals resilient economy</h5>
+          <p class="card-text">Spot gold lost 0.1% to $2,024.01 an ounce by 10:56 a.m. ET (1556 GMT), after hitting its
+            highest since Feb. 9 of $2034.69 earlier in the session. US gold futures was steady at $2,033.50.</p>
+          <a href="https://www.moneycontrol.com/news/business/markets/gold-slips-as-dollar-firms-after-us-data-signals-resilient-economy-12334761.html"
+            class="btn btn-success">Show More</a>
+        </div>
+      </div>
+      <div class="card mb-2">
+        <div class="card-body">
+          <h5 class="card-title">Rupee rises 13 paise to close at 82.83 against US dollar</h5>
+          <p class="card-text">Forex traders said elevated crude oil prices weighed on the local unit and restricted a
+            sharp uptick.</p>
+          <a href="https://www.moneycontrol.com/news/business/markets/rupee-rises-13-paise-to-close-at-82-83-against-us-dollar-12332431.html"
+            class="btn btn-success">Show More</a>
+        </div>
+      </div>
+      <div class="card mb-2">
+        <div class="card-body">
+          <h5 class="card-title">Oil rises on shipping tensions but US inventory build caps gains</h5>
+          <p class="card-text">Brent crude futures were up 51 cents to $83.54 a barrel at 11:49 ET (1649 GMT). US West
+            Texas Intermediate crude futures were up 64 cents at $78.55 a barrel.</p>
+          <a href="https://www.moneycontrol.com/news/business/markets/oil-rises-on-shipping-tensions-but-us-inventory-build-caps-gains-12334751.html"
+            class="btn btn-success">Show More</a>
+        </div>
+      </div>
+      <div class="news-letter mt-4 mb-3">
+        <h3 class="">Subscribe for daily news updates:</h3>
+        <form action="#" class="d-flex" method="Post">
+          <input type="text" class="p-2" name="text" placeholder="Enter Your Email Id">
+          <button type="button" class="btn btn-success"><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
 
-    
-  </body>
+    </div>
+  </div>
+</div>
+</div>
+<footer class="main-footer text-white text-center text-lg-start">
+  <div class="container p-5">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Financial Education</h5>
+        <p>
+          Improving financial literacy is crucial for making informed
+          decisions about money. Understanding concepts like budgeting,
+          saving, and investing can lead to a more secure financial future.
+        </p>
+      </div>
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Finance Awareness</h5>
+        <p>
+          Stay updated with the latest financial news and trends. Being
+          aware of financial opportunities and risks can help you make
+          better financial choices and achieve your goals.
+        </p>
+      </div>
+    </div>
+  </div>
+  <hr style="color: aliceblue" />
+  <div class="text-center p-3 footer-text">
+    © 2024 Copyright:
+    <a class="text-body" href="#">Scorpions</a>
+  </div>
+</footer>
+<script src="js/piechart.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+
 </html>
-
-
